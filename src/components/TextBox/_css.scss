@@ -1,0 +1,130 @@
+/****Modal Override styles****/
+.modal {
+  --#{$prefix}modal-box-shadow: #{0 0.5rem 1rem rgba(0, 0, 0, 0.55)};
+  --#{$prefix}modal-border-radius: #{none};
+}
+
+.modal-open {
+  color: black;
+  .show {
+    background: none;
+  }
+}
+
+.modal-backdrop {
+  background: none;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 1px;
+  h5 {
+    font-family: none;
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: #611818;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #611818, #8c4d5b, #ae879c, #d0c3d3, #ffffff);
+    border-image-slice: 1;
+    width:60%;
+  }
+  .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #611818;
+  }
+}
+
+.modal-content {
+  margin: 3%;
+  padding: 6%;
+}
+
+.modal-body {
+  line-height: 1.9;
+}
+
+.modal-dialog {
+  margin-left: 6.25%;
+}
+
+.red {
+  font-family: sans-serif;
+  background: rgb(97, 24, 24);
+  background: linear-gradient(
+    90deg,
+    rgba(97, 24, 24, 1) 0%,
+    rgba(97, 24, 24, 1) 0%,
+    rgba(97, 24, 24, 0.9850533963585434) 50%,
+    rgba(106, 38, 38, 1) 60%,
+    rgba(123, 62, 62, 1) 70%,
+    rgba(127, 68, 68, 1) 80%,
+    rgba(127, 68, 68, 1) 100%,
+    rgba(127, 68, 68, 1) 100%
+  );
+  padding: 10px;
+}
+
+.modal-footer {
+  justify-content: flex-start;
+  border-top: none;
+  button {
+    width: 50%;
+    border-radius: 0;
+    border: none;
+  }
+}
+
+.btn {
+    letter-spacing: 1.5px;
+    background: linear-gradient(to right, #611818, #611b18, #611e18, #612118, #612418, #63291a, #662e1d, #683320, #6e3c27, #73452e, #794d36, #7e563e);
+}
+
+.btn-close {
+    opacity: 1;
+}
+
+.btn:focus {
+    box-shadow: none; 
+}
+.btn:focus-visible {
+    border: none; 
+    color: black;
+}
+.btn:hover {
+    border: none;
+    box-shadow: 0.5rem 0.3rem .8rem rgba(0, 0, 0, 0.45);
+    transition: ease .35s;
+}
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: none; 
+    opacity: 1;
+}
+
+/**** TextBox Responsive Queries ****/
+@include media-breakpoint-down(xl) {
+  .modal-dialog {
+    margin: 0 3% !important;
+  }
+}
+
+@include media-breakpoint-down(md) {
+    .modal-header h5 {
+        font-size: 3rem; 
+    }
+  }
+
+@include media-breakpoint-down(sm) {
+    .modal-content {
+        margin: 0;
+    .modal-footer {
+      justify-content: center !important;
+      button {
+          width: 100%;
+      }
+     }
+    }
+  }
