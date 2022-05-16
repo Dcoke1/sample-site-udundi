@@ -36,8 +36,8 @@
   }
   .btn-close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -5px;
+    right: -5px;
     color: #611818;
   }
 }
@@ -126,6 +126,14 @@
         margin: 0;
         padding: 3%;
         padding-bottom: 6%;
+        .modal-header {
+          .btn-close {
+            position: absolute;
+            top: 7px;
+            right: 5px;
+            color: #611818;
+          }
+        }
     .modal-footer {
       justify-content: center !important;
       button {
