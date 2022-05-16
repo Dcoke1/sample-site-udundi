@@ -1,3 +1,8 @@
+  window.onload = function() { 
+    const page_element = document.getElementById("toggle-action");
+    page_element.classList.add("fadeInLeft");
+  };
+
 const toggleAnimate = () => {
 
   const element = document.getElementById("toggle-action");

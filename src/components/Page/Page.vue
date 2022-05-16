@@ -14,7 +14,7 @@ import toggleAnimate from "./js.js";
     </div>
     <div class="content-container position-relative">
       <TextBox />
-      <div id="toggle-action" class="more-details position-absolute fadeInLeft">
+      <div id="toggle-action" class="more-details position-absolute">
         <h1 class="more-details-text fw-bold m-0">Explore</h1>
         <div
           class="more-details-sub d-flex flex-row align-items-center"
