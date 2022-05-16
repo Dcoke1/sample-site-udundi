@@ -18,7 +18,7 @@
 .modal-header {
     border-bottom: none;
     padding-bottom: 1rem;
-    h5{
+    h5 {
     font-family: none;
     font-weight: bold;
     font-size: 3.5rem;
@@ -58,18 +58,6 @@
 
 .red {
   font-family: sans-serif;
-  background: rgb(97, 24, 24);
-  background: linear-gradient(
-    90deg,
-    rgba(97, 24, 24, 1) 0%,
-    rgba(97, 24, 24, 1) 0%,
-    rgba(97, 24, 24, 0.9850533963585434) 50%,
-    rgba(106, 38, 38, 1) 60%,
-    rgba(123, 62, 62, 1) 70%,
-    rgba(127, 68, 68, 1) 80%,
-    rgba(127, 68, 68, 1) 100%,
-    rgba(127, 68, 68, 1) 100%
-  );
   padding: 10px;
 }
 
@@ -79,7 +67,7 @@
   button {
     width: 50%;
     border-radius: 0;
-    border: none;
+    border: 2px inset #E3E3E3;
   }
 }
 
@@ -87,10 +75,17 @@
     letter-spacing: 1.5px;
     background: linear-gradient(to right, #611818, #611b18, #611e18, #612118, #612418, #63291a, #662e1d, #683320, #6e3c27, #73452e, #794d36, #7e563e);
     &:focus {
-        box-shadow: none; 
+        box-shadow: none;
+        background-color: #E5E5E5;
+        border-color: #E5E5E5;  
     }
-    &:focus-visible {
-        border: none; 
+    &:active { 
+        background-color: #E5E5E5;
+        border-color: #E5E5E5;
+    }
+    &:focus {
+        background-color: #E5E5E5;
+        border-color: #E5E5E5; 
     }
     &:hover {
         border: none;
@@ -101,6 +96,7 @@
 
 .btn-close {
     opacity: 1;
+    filter: invert(16%) sepia(9%) saturate(4469%) hue-rotate(314deg) brightness(114%) contrast(109%);
     &:focus {
         outline: 0;
         box-shadow: none; 
