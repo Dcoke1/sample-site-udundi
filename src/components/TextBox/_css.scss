@@ -18,7 +18,7 @@
 .modal-header {
     border-bottom: none;
     padding-bottom: 1px;
-  h5 {
+     h5 {
     font-family: none;
     font-weight: bold;
     font-size: 3.5rem;
@@ -120,6 +120,7 @@
 @include media-breakpoint-down(sm) {
     .modal-content {
         margin: 0;
+        padding: 3%;
     .modal-footer {
       justify-content: center !important;
       button {
