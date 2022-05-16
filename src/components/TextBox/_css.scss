@@ -17,16 +17,22 @@
 
 .modal-header {
     border-bottom: none;
-    padding-bottom: 1px;
-     h5 {
+    padding-bottom: 1rem;
+    h5{
     font-family: none;
     font-weight: bold;
     font-size: 3.5rem;
     color: #611818;
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(to right, #611818, #8c4d5b, #ae879c, #d0c3d3, #ffffff);
-    border-image-slice: 1;
-    width:60%;
+    margin-bottom: -6rem;
+    &:after {
+        content: '\00a0';
+        background-image: linear-gradient(to right, #611818, #8c4d5b, #ae879c, #d0c3d3, #ffffff);
+        border-image-slice: 1;
+        background-size: 100% 3px;
+        background-repeat: no-repeat;
+        float:left;
+        width:100%;
+    }
   }
   .btn-close {
     position: absolute;
@@ -79,29 +85,26 @@
 .btn {
     letter-spacing: 1.5px;
     background: linear-gradient(to right, #611818, #611b18, #611e18, #612118, #612418, #63291a, #662e1d, #683320, #6e3c27, #73452e, #794d36, #7e563e);
+    &:focus {
+        box-shadow: none; 
+    }
+    &:focus-visible {
+        border: none; 
+    }
+    &:hover {
+        border: none;
+        box-shadow: 0.5rem 0.3rem .8rem rgba(0, 0, 0, 0.45);
+        transition: ease .35s; 
+    }
 }
 
 .btn-close {
     opacity: 1;
-}
-
-.btn:focus {
-    box-shadow: none; 
-}
-.btn:focus-visible {
-    border: none; 
-    color: black;
-}
-.btn:hover {
-    border: none;
-    box-shadow: 0.5rem 0.3rem .8rem rgba(0, 0, 0, 0.45);
-    transition: ease .35s;
-}
-
-.btn-close:focus {
-    outline: 0;
-    box-shadow: none; 
-    opacity: 1;
+    &:focus {
+        outline: 0;
+        box-shadow: none; 
+        opacity: 1;
+    }
 }
 
 /**** TextBox Responsive Queries ****/
