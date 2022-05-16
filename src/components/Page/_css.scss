@@ -32,6 +32,9 @@
   }
 
 .content-container {
+    #toggle-action {
+        display: none;
+    }
   z-index: 9999;
   .more-details {
     margin-left: 6%;

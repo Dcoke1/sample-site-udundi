@@ -1,5 +1,6 @@
   window.onload = function() { 
     const page_element = document.getElementById("toggle-action");
+    page_element.style.display = "block";
     page_element.classList.add("fadeInLeft");
   };
 
