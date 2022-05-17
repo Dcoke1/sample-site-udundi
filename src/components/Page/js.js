@@ -1,7 +1,11 @@
-  window.onload = function() { 
+  window.addEventListener('load', () => { 
+    
     const page_element = document.getElementById("toggle-action");
-    page_element.style.display = "block";
-  };
+    
+    setTimeout(() => {
+        page_element.style.display = "block"
+    }, 100);
+  });
 
 const toggleAnimate = () => {
 
