@@ -111,6 +111,9 @@
     .modal-header h5 {
         font-size: 3rem; 
     }
+    .modal-body {
+        padding-top: 1.5rem;
+      }
   }
 
 @include media-breakpoint-down(sm) {
@@ -126,6 +129,10 @@
             color: #611818;
           }
         }
+        .modal-body {
+            line-height: 1.75;
+            padding-top: 1.75rem;
+          }
     .modal-footer {
       justify-content: center !important;
       button {
