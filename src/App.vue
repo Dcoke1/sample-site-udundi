@@ -8,4 +8,3 @@ import './assets/base.scss';
     <Page />
   </main>
 </template>
-

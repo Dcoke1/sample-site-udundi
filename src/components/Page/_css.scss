@@ -25,16 +25,16 @@
   height: 100%;
 }
 .bg-thumb {
-    background: url("../../assets/backgroundt.png") no-repeat;;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  }
+  background: url("../../assets/backgroundt.png") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .content-container {
-    #toggle-action {
-        display: none;
-    }
+  #toggle-action {
+    display: none;
+  }
   z-index: 9999;
   .more-details {
     margin-left: 6%;
@@ -52,9 +52,9 @@
         margin-left: 3.25rem;
         margin-right: 0.75rem;
         &:hover {
-            border-radius: 100%;
-            box-shadow: 0.5rem 0.3rem 1rem rgba(0, 0, 0, 0.35);
-            transition: ease .15s;
+          border-radius: 100%;
+          box-shadow: 0.5rem 0.3rem 1rem rgba(0, 0, 0, 0.35);
+          transition: ease 0.15s;
         }
       }
       span {
@@ -130,6 +130,31 @@
     opacity: 1;
     -webkit-transform: none;
     transform: none;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

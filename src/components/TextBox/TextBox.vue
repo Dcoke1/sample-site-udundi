@@ -1,3 +1,20 @@
+<script>
+export default {
+  data() {
+    return {
+      zoom: "zoomInLeft",
+    };
+  },
+  methods: {
+    addClass: function () {
+      this.zoom = "zoomOutLeft";
+      setTimeout(() => {
+        this.zoom = "zoomInLeft";
+      }, 1000)
+    },
+  },
+};
+</script>
 
 <template>
   <div class="TextBoxModal">
@@ -7,10 +24,11 @@
       tabindex="-1"
       aria-labelledby="modal-label"
       aria-hidden="true"
+      @click="addClass"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
+        <div class="modal-content" v-bind:class="zoom">
+          <div class="modal-header fadeIn">
             <h5 class="modal-title" id="modal-label">Explore</h5>
             <button
               type="button"
@@ -19,7 +37,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body fadeIn">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit
             amet libero placerat ligula rhoncus tincidunt at non ex. Curabitur
             sed tristique metus, sed vulputate diam. Nam eu feugiat libero.
@@ -30,7 +48,7 @@
             hendrerit eros condimentum aliquet. Ut varius est eget lorem
             aliquet, sed egestas diam euismod.
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer fadeIn">
             <button type="button" class="btn btn-primary red">READ MORE</button>
           </div>
         </div>
