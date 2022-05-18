@@ -24,7 +24,6 @@ export default {
       tabindex="-1"
       aria-labelledby="modal-label"
       aria-hidden="true"
-      @click="addClass"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" v-bind:class="zoom">
@@ -35,6 +34,7 @@ export default {
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
+              @click="addClass"
             ></button>
           </div>
           <div class="modal-body fadeIn">
