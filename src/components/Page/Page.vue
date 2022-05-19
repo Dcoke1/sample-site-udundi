@@ -1,6 +1,7 @@
 <script setup>
 import TextBox from "../TextBox/TextBox.vue";
 import toggleAnimate from "./js.js";
+import toggleAnimateOut from "./js.js";
 </script>
 
 <template>

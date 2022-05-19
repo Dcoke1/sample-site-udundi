@@ -10,8 +10,11 @@ export default {
       this.zoom = "zoomOutLeft";
       setTimeout(() => {
         this.zoom = "zoomInLeft";
-      }, 1000)
+      }, 1000);
     },
+  },
+  mounted() {
+    $(this.$refs.vuemodal).on("hide.bs.modal", this.addClass);
   },
 };
 </script>
@@ -24,6 +27,7 @@ export default {
       tabindex="-1"
       aria-labelledby="modal-label"
       aria-hidden="true"
+      ref="vuemodal"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content" v-bind:class="zoom">
@@ -34,7 +38,6 @@ export default {
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-              @click="addClass"
             ></button>
           </div>
           <div class="modal-body fadeIn">
